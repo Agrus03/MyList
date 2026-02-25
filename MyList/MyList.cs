@@ -24,15 +24,12 @@ public class MyList<T>
     {
         if(_count == _items.Length)
         {
-            Resize();
-            _items[_count] = item;
-            _count++;
+            Resize(); // Тільки збільшуємо, якщо треба
         }
-        else
-        {
-            _items[_count] = item;
-            _count ++;
-        }
+        
+        // Додаємо елемент у будь-якому випадку (місце вже точно є)
+        _items[_count] = item; 
+        _count++;
     }
     private void Resize()
     {
@@ -46,7 +43,7 @@ public class MyList<T>
     }
     public void RemoveAtIndex(int index)
     {
-        if(index < 0 || index > _count)
+        if(index < 0 || index >= _count)
         {
             throw new ArgumentOutOfRangeException(nameof(index), "Invalid Index");
         }
