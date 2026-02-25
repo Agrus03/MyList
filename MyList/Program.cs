@@ -18,7 +18,7 @@ class Program
         heroes.ShowAll();
         // Очікуємо: Count = 4, Capacity = 4
 
-        Console.WriteLine("\n=== ЕТАП 3: МАГІЯ RESIZE (Додаємо 5-й елемент) ===");
+        Console.WriteLine("\n=== ЕТАП 3: RESIZE (Додаємо 5-й елемент) ===");
         heroes.Add("Wonder Woman"); // Коробка переповнена! Має спрацювати Resize()
         PrintStatus(heroes, "Додали Wonder Woman");
         heroes.ShowAll();
